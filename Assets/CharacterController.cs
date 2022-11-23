@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -64,5 +65,13 @@ public class CharacterController : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0.0f, rotation, 0.0f));
         camRoatation = camRoatation + Input.GetAxis("Mouse Y") * camRotationSpeed *-1;
         cam.transform.localRotation = Quaternion.Euler(new Vector3(camRoatation, 0.0f,0.0f));
+    }
+
+    void OnTriggerEnter (Collider other)
+    {
+        if (other.tag == "Scene Change")
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
