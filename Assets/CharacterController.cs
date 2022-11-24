@@ -14,9 +14,12 @@ public class CharacterController : MonoBehaviour
     public float jumpForce = 3000.0f; 
     public float maxSprint = 5.0f;
     float sprintTimer;
+    Animator myAnim;
     
     void Start()
     {
+        
+        myAnim = GetComponentInChildren<Animator>();
         cam = GameObject.Find("Main Camera");
         myRigidbody = GetComponent<Rigidbody>();
         sprintTimer = maxSprint;
@@ -36,6 +39,9 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        
+       
+       
         if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
             myRigidbody.AddForce(transform.up* jumpForce);
@@ -58,6 +64,7 @@ public class CharacterController : MonoBehaviour
         sprintTimer = Mathf.Clamp(sprintTimer, 0.0f, maxSprint);
 
         Vector3 newVelocity = transform.forward * Input.GetAxis("Vertical") * maxSpeed;
+        myAnim.SetFloat("speed", newVelocity.magnitude);
         newVelocity += transform.right * Input.GetAxis("Horizontal")* maxSpeed ;
         myRigidbody.velocity = new Vector3(newVelocity.x, myRigidbody.velocity.y, newVelocity.z);
        // transform.position = transform.position + (transform.forward * Input.GetAxis("Vertical")* maxSpeed);
