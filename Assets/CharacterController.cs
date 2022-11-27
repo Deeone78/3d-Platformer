@@ -8,7 +8,7 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     GameObject cam;
     Rigidbody myRigidbody;
-    bool isOnGround;
+    bool isOnGround = false;
     public GameObject groundChecker;
     public LayerMask groundLayer;
     public float jumpForce = 3000.0f; 
@@ -39,15 +39,20 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+
+
         
-       
-       
+        
+        isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
+        myAnim.SetBool("isOnGround", isOnGround);
+        
         if (isOnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
+            myAnim.SetTrigger("jumped");
             myRigidbody.AddForce(transform.up* jumpForce);
-
+              
         }
-        isOnGround = Physics.CheckSphere(groundChecker .transform.position, 0.1f, groundLayer);
+       
         
         if (Input.GetKey(KeyCode.LeftShift)&& sprintTimer > 0.0f)
         {

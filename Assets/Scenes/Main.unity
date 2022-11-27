@@ -4745,6 +4745,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6855173969220874419, guid: 4c7c64b15e7d13e4e95ae19cf25752e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2107
+      objectReference: {fileID: 0}
     - target: {fileID: -1898929964545033982, guid: 4c7c64b15e7d13e4e95ae19cf25752e5, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -10721,7 +10725,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5a8d13d00a6191d419238b1d09778003, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a8d13d00a6191d419238b1d09778003, type: 3}
       propertyPath: m_LocalScale.x
@@ -10805,6 +10809,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1171480360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171480357}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04373132, y: 0.035212137, z: 0.06950585}
+  m_Center: {x: -0.0010538519, y: 0.041309264, z: 0.0005417049}
 --- !u!1 &1172054165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3495235240227390344, guid: 4c7c64b15e7d13e4e95ae19cf25752e5, type: 3}
