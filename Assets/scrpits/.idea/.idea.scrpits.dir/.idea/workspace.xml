@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f79af31-9b32-4508-97eb-d7ed2803ac6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../CharacterController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CharacterController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../animations/Collectable1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/../animations/Collectable1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../animations/Level 1 3D platfromer.controller" beforeDir="false" afterPath="$PROJECT_DIR$/../animations/Level 1 3D platfromer.controller" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,12 +95,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669631385906</updated>
-      <workItem from="1669631394493" duration="154000" />
+      <workItem from="1669631394493" duration="750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154000" />
+    <option name="totallyTimeSpent" value="750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
