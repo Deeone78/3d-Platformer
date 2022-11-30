@@ -22490,7 +22490,7 @@ GameObject:
   - component: {fileID: 2117106913}
   - component: {fileID: 2117106912}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: reavealing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22566,7 +22566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117106911}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 22.34, y: -28.157, z: -28.92}
+  m_LocalPosition: {x: 22.27, y: -28.157, z: -29.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

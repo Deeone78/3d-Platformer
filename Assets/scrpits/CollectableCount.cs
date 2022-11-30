@@ -6,9 +6,11 @@ public class CollectableCount : MonoBehaviour
 {
     TMPro.TMP_Text text;
     int count;
+    public GameObject reaveal;
 
     void Awake()
     {
+        
         text = GetComponent<TMPro.TMP_Text>();
     }
 
