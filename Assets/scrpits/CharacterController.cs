@@ -48,9 +48,10 @@ public class CharacterController : MonoBehaviour
 
         scoreCounter.text = pickupCount.ToString();
 
-        if (pickupCount >= 10)
+        if (pickupCount >= 1)
         {
             key.SetActive(true);
+            pickupCount = 0;
         }
         
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
@@ -111,6 +112,7 @@ public class CharacterController : MonoBehaviour
                 Destroy(other.gameObject);
                 break;
             case "End door" when keyCollected:
+                Debug.Log("E");
                 SceneManager.LoadScene(0);
                 break;
         }
