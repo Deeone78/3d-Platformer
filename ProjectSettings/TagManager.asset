@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Scene Change
   - Coin
+  - Pickup
+  - Key
+  - End door
   layers:
   - Default
   - TransparentFX

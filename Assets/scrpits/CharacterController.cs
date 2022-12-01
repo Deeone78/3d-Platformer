@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class CharacterController : MonoBehaviour
     public float maxSprint = 5.0f;
     float sprintTimer;
     Animator myAnim;
+
+    int pickupCount = 0;
+    public Text scoreCounter;
+    public GameObject key;
+    bool keyCollected = false;
     
     void Start()
     {
@@ -40,8 +46,12 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
 
+        scoreCounter.text = pickupCount.ToString();
 
-        
+        if (pickupCount >= 10)
+        {
+            key.SetActive(true);
+        }
         
         isOnGround = Physics.CheckSphere(groundChecker.transform.position, 0.1f, groundLayer);
         myAnim.SetBool("isOnGround", isOnGround);
@@ -82,9 +92,27 @@ public class CharacterController : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if (other.tag == "Scene Change")
+        /*if (other.tag == "Scene Change")
         {
             SceneManager.LoadScene(1);
+        }*/
+        
+        switch (other.tag)
+        {
+            case "Scene Change":
+                SceneManager.LoadScene(1);
+                break;
+            case "Pickup":
+                pickupCount++;
+                Destroy(other.gameObject);
+                break;
+            case "Key":
+                keyCollected = true;
+                Destroy(other.gameObject);
+                break;
+            case "End door" when keyCollected:
+                SceneManager.LoadScene(0);
+                break;
         }
     }
 }
