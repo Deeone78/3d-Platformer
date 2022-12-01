@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
     {
 
         Application.Quit();
-       // Debug.log("Quitingggg");
+            Debug.Log("E");
 
     }
 

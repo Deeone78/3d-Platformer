@@ -48,7 +48,7 @@ public class CharacterController : MonoBehaviour
 
         scoreCounter.text = pickupCount.ToString();
 
-        if (pickupCount >= 1)
+        if (pickupCount >= 10)
         {
             key.SetActive(true);
             pickupCount = 0;
@@ -101,7 +101,7 @@ public class CharacterController : MonoBehaviour
         switch (other.tag)
         {
             case "Scene Change":
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
                 break;
             case "Pickup":
                 pickupCount++;
@@ -112,8 +112,8 @@ public class CharacterController : MonoBehaviour
                 Destroy(other.gameObject);
                 break;
             case "End door" when keyCollected:
-                Debug.Log("E");
-                SceneManager.LoadScene(0);
+               // Debug.Log("E");
+                SceneManager.LoadScene(3);
                 break;
         }
     }
