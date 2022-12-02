@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class CharacterController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public AudioClip collect;
+    public AudioSource sfxPlayer;
+    public static event Action OnCollected;    
     GameObject cam;
     Rigidbody myRigidbody;
     bool isOnGround = false;
@@ -106,6 +110,7 @@ public class CharacterController : MonoBehaviour
             case "Pickup":
                 pickupCount++;
                 Destroy(other.gameObject);
+                 sfxPlayer.PlayOneShot(collect);
                 break;
             case "Key":
                 keyCollected = true;
