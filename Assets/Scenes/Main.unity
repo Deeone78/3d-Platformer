@@ -16182,7 +16182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1587063833}
   - component: {fileID: 1587063832}
-  - component: {fileID: 1587063834}
   m_Layer: 0
   m_Name: Music_Source
   m_TagString: Untagged
@@ -16300,31 +16299,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1587063834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587063831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3aa02c7813bce24a88e27ae7d3e42e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collect: {fileID: 8300000, guid: 4ebe625dcf232a848aac8d0c5fa0f8eb, type: 3}
-  sfxPlayer: {fileID: 1587063832}
-  groundChecker: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  jumpForce: 3000
-  maxSprint: 5
-  scoreCounter: {fileID: 0}
-  key: {fileID: 0}
-  normalSpeed: 10
-  maxSpeed: 0
-  sprintSpeed: 20
 --- !u!1 &1587828930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3403145683277427513, guid: 4c7c64b15e7d13e4e95ae19cf25752e5, type: 3}
@@ -17992,8 +17966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3aa02c7813bce24a88e27ae7d3e42e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collect: {fileID: 0}
-  sfxPlayer: {fileID: 0}
+  collect: {fileID: 8300000, guid: 4ebe625dcf232a848aac8d0c5fa0f8eb, type: 3}
+  sfxPlayer: {fileID: 1587063832}
   groundChecker: {fileID: 811265852}
   groundLayer:
     serializedVersion: 2
